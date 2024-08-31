@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen's Birthday</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        #cake, #confetti, #envelope, #message-container {
+            display: none;
+            margin-top: 20px;
+        }
+        #cake {
+            font-size: 50px;
+        }
+        #confetti {
+            font-size: 30px;
+            color: red;
+        }
+        #envelope {
+            font-size: 40px;
+            color: gold;
+            margin-top: 30px;
+        }
+        #message-container {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #message {
+            display: none;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Your Birthday Surprise!</h1>
+    
+    <div id="age-prompt">
+        <label for="age">Enter your age:</label>
+        <input type="number" id="age" min="1">
+        <button onclick="showCake()">Submit</button>
+    </div>
+    
+    <div id="cake">🎂</div>
+    <div id="confetti">🎉🎉🎉</div>
+    
+    <div id="envelope">✉️</div>
+    
+    <div id="message-container">
+        <div id="message">
+            <p>To my favorite person: Happy Birthday baby! Every moment with you is a gift. Thank you for always making me smile. Here’s to celebrating you and all the wonderful things you are! 🎂❤️</p>
+            <button onclick="showDatePrompt()">Will you be my date?</button>
+        </div>
+    </div>
+    
+    <script>
+        function showCake() {
+            document.getElementById('cake').style.display = 'block';
+            document.getElementById('confetti').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('message').style.display = 'block';
+                document.getElementById('envelope').style.display = 'block';
+            }, 1000);  // 1 second delay for effect
+        }
+
+        function showDatePrompt() {
+            let userResponse = confirm('Yayy! See youuuu tomorrow ;)');
+            if (userResponse) {
+                alert('Yayy! See youuuu tomorrow ;)');
+            }
+        }
+    </script>
+</body>
+</html>
