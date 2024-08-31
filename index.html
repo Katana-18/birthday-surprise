@@ -36,19 +36,21 @@
 </head>
 <body>
   <main class="container">
+    <!-- Age Prompt -->
     <div id="prompt-age">
       <h2>Enter your age:</h2>
       <input type="number" id="age-input" placeholder="Your age" required />
       <button onclick="showCake()">Submit</button>
     </div>
 
+    <!-- Cake Section -->
     <div class="cake">
       <img src="https://www.hallmark.com/on/demandware.static/-/Sites-master-catalog-hallmark/default/dwbf4d74b8/images/finished-goods/BDS1596_E104_zoom.jpg" alt="Cake" style="display: block; margin: 20px auto;">
       <button onclick="blowCandle()">Blow</button>
     </div>
 
+    <!-- Confetti Animation -->
     <div class="confetti" id="confetti">
-      <!-- Confetti particles -->
       <div style="left:10%"></div>
       <div style="left:30%"></div>
       <div style="left:50%"></div>
@@ -56,19 +58,23 @@
       <div style="left:90%"></div>
     </div>
 
+    <!-- Message -->
     <h2 id="message">Happy Birthday, my baby! &lt;3</h2>
 
+    <!-- Envelope Section -->
     <div class="envelope">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Envelope_with_heart_icon.png" alt="Envelope" style="display: block; margin: 20px auto;">
       <button onclick="openEnvelope()">Open this</button>
     </div>
 
+    <!-- Date Prompt -->
     <div id="date-prompt">
       <p>Will you be my date?</p>
       <button onclick="confirmDate()">Yes</button>
     </div>
   </main>
 
+  <!-- JavaScript for Interactivity -->
   <script>
     function showCake() {
       document.getElementById("prompt-age").style.display = "none";
